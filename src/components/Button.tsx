@@ -1,79 +1,97 @@
 import {
-  View,
   Pressable,
   StyleSheet,
   Text,
-  DimensionValue,
-  ColorValue,
+  ViewStyle,
+  TextStyle,
 } from "react-native";
 import { FC, ReactNode } from "react";
 import { gSC } from "@/styles/global";
+import { Link } from "expo-router";
 
 const styles = StyleSheet.create({
-  container: { width: "100%" },
   button: {
     alignItems: "center",
     justifyContent: "center",
-    textAlign: "center",
-    backgroundColor: gSC("orange950"),
+    backgroundColor: gSC("blue600"),
     borderRadius: 8,
+    width: "auto",
     height: 60,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     borderWidth: 1,
-    borderColor: gSC("black"),
+    borderColor: gSC("black", 0.2),
   },
   text: {
     color: gSC("white"),
-    // textTransform: "uppercase",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
-    width: "100%",
-    flex: 1,
+    fontStyle: "normal",
     textAlign: "center",
     verticalAlign: "middle",
   },
 });
 
 type TButtonProps = {
-  onPress: () => void;
-  children: ReactNode;
-  style?: {
-    backgroundColor?: string;
-    color?: string;
-    height?: DimensionValue;
-    width?: DimensionValue;
-    borderWidth?: number;
-    borderColor?: ColorValue;
-  };
+  onPress?: () => void;
+  hRef?: string;
+  children?: ReactNode;
+  style?: ViewStyle & TextStyle;
 };
-const Button: FC<TButtonProps> = ({ onPress, children, style }) => {
+
+const PressableButton: FC<TButtonProps> = ({
+  onPress = () => {},
+  children = "Button",
+  style,
+}) => {
   return (
-    <View style={{ ...styles.container }}>
-      <Pressable
-        onPress={() => {
-          onPress();
-        }}
+    <Pressable
+      onPress={() => {
+        onPress();
+      }}
+      style={{
+        ...styles.button,
+        ...(style ? { ...style } : {}),
+      }}
+    >
+      <Text
         style={{
-          ...styles.button,
-          backgroundColor: style?.backgroundColor
-            ? style?.backgroundColor
-            : styles.button.backgroundColor,
-          height: style?.height ?? styles.button.height,
-          width: style?.width,
-          borderWidth: style?.borderWidth ?? styles.button.borderWidth,
-          borderColor: style?.borderColor ?? styles.button.borderColor,
+          ...styles.text,
+          ...(style?.color ? { color: style.color } : {}),
+          ...(style?.fontSize ? { fontSize: style.fontSize } : {}),
+          ...(style?.fontWeight ? { fontWeight: style.fontWeight } : {}),
+          ...(style?.fontFamily ? { fontFamily: style.fontFamily } : {}),
+          ...(style?.fontVariant ? { fontVariant: style.fontVariant } : {}),
+          ...(style?.textAlign ? { textAlign: style.textAlign } : {}),
+          ...(style?.verticalAlign
+            ? { verticalAlign: style.verticalAlign }
+            : {}),
+          ...(style?.textAlignVertical
+            ? { textAlignVertical: style.textAlignVertical }
+            : {}),
         }}
       >
-        <Text
-          style={{
-            ...styles.text,
-            color: style?.color ? style?.color : styles.text.color,
-          }}
-        >
-          {children}
-        </Text>
-      </Pressable>
-    </View>
+        {children}
+      </Text>
+    </Pressable>
   );
+};
+
+const LinkButton: FC<TButtonProps> = (props) => {
+  props.children = props?.children ?? "Link";
+  return (
+    <Link
+      href={props.hRef ?? ""}
+      asChild
+    >
+      <PressableButton {...props}></PressableButton>
+    </Link>
+  );
+};
+
+const Button: FC<TButtonProps> = (props) => {
+  if (props?.hRef) return <LinkButton {...props}></LinkButton>;
+  return <PressableButton {...props}></PressableButton>;
 };
 
 export default Button;
