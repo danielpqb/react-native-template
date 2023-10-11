@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
-import App from "../contexts/AppContext";
 import { gSC, gStyles } from "../styles/global";
+import App from "@/contexts/AppContext";
 
 const styles = StyleSheet.create({
   view: { ...gStyles.growCenter },

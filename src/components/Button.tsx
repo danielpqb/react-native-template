@@ -7,7 +7,7 @@ import {
   ColorValue,
 } from "react-native";
 import React from "react";
-import { gSC } from "../styles/global";
+import { gSC } from "@/styles/global";
 
 const styles = StyleSheet.create({
   container: { width: "100%" },

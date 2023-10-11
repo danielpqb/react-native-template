@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import colors from "../../ccpreview.config.json";
-import Color from "../utils/color-converter";
+import Color from "@/utils/color-converter";
 
 const gColors = colors;
 /**

@@ -1,7 +1,7 @@
 import { FC, ReactNode, createContext, useContext } from "react";
 
 type AppContextType = {};
-const AppContext = createContext<AppContextType>({});
+const AppContext = createContext<AppContextType>({} as AppContextType);
 
 type AppProps = {
   children: ReactNode;
