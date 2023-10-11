@@ -1,4 +1,4 @@
-import { FC, ReactNode, createContext, useContext, useEffect } from "react";
+import { FC, ReactNode, createContext, useContext } from "react";
 
 type AppContextType = {};
 const AppContext = createContext<AppContextType>({});
@@ -7,10 +7,6 @@ type AppProps = {
   children: ReactNode;
 };
 const App: FC<AppProps> = ({ children }) => {
-  useEffect(() => {
-    
-  }, []);
-
   return <AppContext.Provider value={{}}>{children}</AppContext.Provider>;
 };
 

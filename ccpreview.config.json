@@ -2,7 +2,7 @@
   "white": "#FFFFFF",
   "black": "#000000",
 
-  "slate50": "#f8fafc",
+  "slate050": "#f8fafc",
   "slate100": "#f1f5f9",
   "slate200": "#e2e8f0",
   "slate300": "#cbd5e1",
@@ -14,7 +14,7 @@
   "slate900": "#0f172a",
   "slate950": "#020617",
 
-  "gray50": "#f9fafb",
+  "gray050": "#f9fafb",
   "gray100": "#f3f4f6",
   "gray200": "#e5e7eb",
   "gray300": "#d1d5db",
@@ -26,7 +26,7 @@
   "gray900": "#111827",
   "gray950": "#030712",
 
-  "zinc50": "#fafafa",
+  "zinc050": "#fafafa",
   "zinc100": "#f4f4f5",
   "zinc200": "#e4e4e7",
   "zinc300": "#d4d4d8",
@@ -38,7 +38,7 @@
   "zinc900": "#111827",
   "zinc950": "#030712",
 
-  "neutral50": "#fafafa",
+  "neutral050": "#fafafa",
   "neutral100": "#f5f5f5",
   "neutral200": "#e5e5e5",
   "neutral300": "#d4d4d4",
@@ -50,7 +50,7 @@
   "neutral900": "#171717",
   "neutral950": "#0a0a0a",
 
-  "stone50": "#fafaf9",
+  "stone050": "#fafaf9",
   "stone100": "#f5f5f4",
   "stone200": "#e7e5e4",
   "stone300": "#d6d3d1",
@@ -62,7 +62,7 @@
   "stone900": "#1c1917",
   "stone950": "#0c0a09",
 
-  "red50": "#fef2f2",
+  "red050": "#fef2f2",
   "red100": "#fee2e2",
   "red200": "#fecaca",
   "red300": "#fca5a5",
@@ -74,7 +74,7 @@
   "red900": "#7f1d1d",
   "red950": "#450a0a",
 
-  "orange50": "#fff7ed",
+  "orange050": "#fff7ed",
   "orange100": "#ffedd5",
   "orange200": "#fed7aa",
   "orange300": "#fdba74",
@@ -86,7 +86,7 @@
   "orange900": "#7c2d12",
   "orange950": "#431407",
 
-  "amber50": "#fffbeb",
+  "amber050": "#fffbeb",
   "amber100": "#fef3c7",
   "amber200": "#fde68a",
   "amber300": "#fcd34d",
@@ -98,7 +98,7 @@
   "amber900": "#78350f",
   "amber950": "#451a03",
 
-  "yellow50": "#fefce8",
+  "yellow050": "#fefce8",
   "yellow100": "#fef9c3",
   "yellow200": "#fef08a",
   "yellow300": "#fde047",
@@ -110,7 +110,7 @@
   "yellow900": "#713f12",
   "yellow": "#422006",
 
-  "lime50": "#f7fee7",
+  "lime050": "#f7fee7",
   "lime100": "#ecfccb",
   "lime200": "#d9f99d",
   "lime300": "#bef264",
@@ -122,7 +122,7 @@
   "lime900": "#365314",
   "lime950": "#1a2e05",
 
-  "green50": "#f0fdf4",
+  "green050": "#f0fdf4",
   "green100": "#dcfce7",
   "green200": "#bbf7d0",
   "green300": "#86efac",
@@ -134,7 +134,7 @@
   "green900": "#14532d",
   "green950": "#052e16",
 
-  "emerald50": "#ecfdf5",
+  "emerald050": "#ecfdf5",
   "emerald100": "#d1fae5",
   "emerald200": "#a7f3d0",
   "emerald300": "#6ee7b7",
@@ -146,7 +146,7 @@
   "emerald900": "#14532d",
   "emerald950": "#052e16",
 
-  "teal50": "#f0fdfa",
+  "teal050": "#f0fdfa",
   "teal100": "#ccfbf1",
   "teal200": "#99f6e4",
   "teal300": "#5eead4",
@@ -158,7 +158,7 @@
   "teal900": "#134e4a",
   "teal950": "#042f2e",
 
-  "cyan50": "#042f2e",
+  "cyan050": "#042f2e",
   "cyan100": "#cffafe",
   "cyan200": "#a5f3fc",
   "cyan300": "#67e8f9",
@@ -170,7 +170,7 @@
   "cyan900": "#164e63",
   "cyan950": "#083344",
 
-  "sky50": "#f0f9ff",
+  "sky050": "#f0f9ff",
   "sky100": "#e0f2fe",
   "sky200": "#bae6fd",
   "sky300": "#7dd3fc",
@@ -182,7 +182,7 @@
   "sky900": "#0c4a6e",
   "sky950": "#082f49",
 
-  "blue50": "#eff6ff",
+  "blue050": "#eff6ff",
   "blue100": "#dbeafe",
   "blue200": "#bfdbfe",
   "blue300": "#93c5fd",
@@ -194,7 +194,7 @@
   "blue900": "#1e3a8a",
   "blue950": "#172554",
 
-  "indigo50": "#eef2ff",
+  "indigo050": "#eef2ff",
   "indigo100": "#e0e7ff",
   "indigo200": "#c7d2fe",
   "indigo300": "#a5b4fc",
@@ -206,7 +206,7 @@
   "indigo900": "#312e81",
   "indigo950": "#1e1b4b",
 
-  "violet50": "#f5f3ff",
+  "violet050": "#f5f3ff",
   "violet100": "#ede9fe",
   "violet200": "#ddd6fe",
   "violet300": "#c4b5fd",
@@ -218,7 +218,7 @@
   "violet900": "#4c1d95",
   "violet950": "#2e1065",
 
-  "purple50": "#faf5ff",
+  "purple050": "#faf5ff",
   "purple100": "#f3e8ff",
   "purple200": "#e9d5ff",
   "purple300": "#d8b4fe",
@@ -230,7 +230,7 @@
   "purple900": "#581c87",
   "purple950": "#3b0764",
 
-  "fuchsia50": "#fdf4ff",
+  "fuchsia050": "#fdf4ff",
   "fuchsia100": "#fae8ff",
   "fuchsia200": "#f5d0fe",
   "fuchsia300": "#f0abfc",
@@ -242,7 +242,7 @@
   "fuchsia900": "#701a75",
   "fuchsia950": "#4a044e",
 
-  "pink50": "#fdf2f8",
+  "pink050": "#fdf2f8",
   "pink100": "#fce7f3",
   "pink200": "#fbcfe8",
   "pink300": "#f9a8d4",
@@ -254,7 +254,7 @@
   "pink900": "#831843",
   "pink950": "#500724",
 
-  "rose50": "#fff1f2",
+  "rose050": "#fff1f2",
   "rose100": "#ffe4e6",
   "rose200": "#fecdd3",
   "rose300": "#fda4af",

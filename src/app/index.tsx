@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from "react-native";
 import App from "../contexts/AppContext";
-import { gCS, gStyles } from "../styles/global";
+import { gSC, gStyles } from "../styles/global";
 
 const styles = StyleSheet.create({
   view: { ...gStyles.growCenter },
   text: {
-    color: gCS("amber600"),
+    color: gSC("orange600"),
     fontSize: 36,
   },
 });

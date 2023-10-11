@@ -6,7 +6,7 @@ const gColors = colors;
 /**
  * @param opacity number from 0 to 1
  */
-export function gCS(
+export function gSC(
   colorKey: keyof typeof gColors,
   opacity?: number,
   normalize?: boolean

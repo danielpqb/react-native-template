@@ -7,7 +7,7 @@ import {
   ColorValue,
 } from "react-native";
 import React from "react";
-import { gCS } from "../styles/global";
+import { gSC } from "../styles/global";
 
 const styles = StyleSheet.create({
   container: { width: "100%" },
@@ -15,14 +15,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    backgroundColor: gCS("black"),
+    backgroundColor: gSC("black"),
     borderRadius: 8,
     height: 60,
     borderWidth: 1,
-    borderColor: gCS("black"),
+    borderColor: gSC("black"),
   },
   text: {
-    color: gCS("white"),
+    color: gSC("white"),
     // textTransform: "uppercase",
     fontSize: 16,
     fontWeight: "700",
