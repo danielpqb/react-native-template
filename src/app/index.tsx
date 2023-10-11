@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import { gSC, gStyles } from "../styles/global";
-import App from "@/contexts/AppContext";
+import AppContext from "@/contexts/AppContext";
+import { FC, ReactNode } from "react";
+import ThemeContext from "@/contexts/ThemeContext";
 
 const styles = StyleSheet.create({
   view: { ...gStyles.growCenter },
@@ -10,12 +12,23 @@ const styles = StyleSheet.create({
   },
 });
 
+type TContextsProps = {
+  children: ReactNode;
+};
+const Contexts: FC<TContextsProps> = ({ children }) => {
+  return (
+    <AppContext>
+      <ThemeContext>{children}</ThemeContext>
+    </AppContext>
+  );
+};
+
 export default function Index() {
   return (
-    <App>
+    <AppContext>
       <View style={{ ...styles.view }}>
         <Text style={{ ...styles.text }}>Hello World!</Text>
       </View>
-    </App>
+    </AppContext>
   );
 }

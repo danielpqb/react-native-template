@@ -6,7 +6,7 @@ import {
   DimensionValue,
   ColorValue,
 } from "react-native";
-import React from "react";
+import { FC, ReactNode } from "react";
 import { gSC } from "@/styles/global";
 
 const styles = StyleSheet.create({
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    backgroundColor: gSC("black"),
+    backgroundColor: gSC("orange950"),
     borderRadius: 8,
     height: 60,
     borderWidth: 1,
@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
   },
 });
 
-type ButtonProps = {
+type TButtonProps = {
   onPress: () => void;
-  children: React.ReactNode;
+  children: ReactNode;
   style?: {
     backgroundColor?: string;
     color?: string;
@@ -45,7 +45,7 @@ type ButtonProps = {
     borderColor?: ColorValue;
   };
 };
-const Button: React.FC<ButtonProps> = ({ onPress, children, style }) => {
+const Button: FC<TButtonProps> = ({ onPress, children, style }) => {
   return (
     <View style={{ ...styles.container }}>
       <Pressable

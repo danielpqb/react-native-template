@@ -6,11 +6,11 @@ const Context = createContext<TContext>({} as TContext);
 type TProps = {
   children: ReactNode;
 };
-const AppContext: FC<TProps> = ({ children }) => {
+const ThemeContext: FC<TProps> = ({ children }) => {
   return <Context.Provider value={{}}>{children}</Context.Provider>;
 };
 
-export default AppContext;
-export function useAppContext() {
+export default ThemeContext;
+export function useThemeContext() {
   return useContext(Context);
 }
