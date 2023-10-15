@@ -19,10 +19,9 @@ const HomeScreen: FC<THomeScreenProps> = () => {
       <Text style={{ ...styles.text }}>Home</Text>
       <Button
         onPress={async () => {
-          
+          console.warn("Hello! I'm a Button.")
         }}
       >
-        Create
       </Button>
     </View>
   );
