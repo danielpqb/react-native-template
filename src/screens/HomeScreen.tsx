@@ -6,17 +6,24 @@ import Button from "@/components/Button";
 const styles = StyleSheet.create({
   view: { ...gStyles.growCenter },
   text: {
-    color: gSC("orange600"),
-    fontSize: 36,
+    color: gSC("zinc200"),
+    fontSize: 50,
+    paddingBottom: 20,
   },
 });
 
 type THomeScreenProps = {};
 const HomeScreen: FC<THomeScreenProps> = () => {
   return (
-    <View style={{ ...styles.view }}>
-      <Text style={{ ...styles.text }}>App!</Text>
-      <Button hRef="/auth"></Button>
+    <View style={{ ...styles.view, gap: 15 }}>
+      <Text style={{ ...styles.text }}>Home</Text>
+      <Button
+        onPress={async () => {
+          
+        }}
+      >
+        Create
+      </Button>
     </View>
   );
 };

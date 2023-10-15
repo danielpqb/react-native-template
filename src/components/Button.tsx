@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { FC, ReactNode } from "react";
 import { gSC } from "@/styles/global";
-import { Link } from "expo-router";
+import { router } from "expo-router";
 
 const styles = StyleSheet.create({
   button: {
@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
     backgroundColor: gSC("blue600"),
     borderRadius: 8,
     width: "auto",
-    height: 60,
+    height: "auto",
+    minHeight: 40,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderWidth: 1,
@@ -39,7 +40,8 @@ type TButtonProps = {
   style?: ViewStyle & TextStyle;
 };
 
-const PressableButton: FC<TButtonProps> = ({
+const Button: FC<TButtonProps> = ({
+  hRef,
   onPress = () => {},
   children = "Button",
   style,
@@ -48,50 +50,40 @@ const PressableButton: FC<TButtonProps> = ({
     <Pressable
       onPress={() => {
         onPress();
+        if (hRef) {
+          router.push(hRef);
+        }
       }}
       style={{
         ...styles.button,
         ...(style ? { ...style } : {}),
       }}
     >
-      <Text
-        style={{
-          ...styles.text,
-          ...(style?.color ? { color: style.color } : {}),
-          ...(style?.fontSize ? { fontSize: style.fontSize } : {}),
-          ...(style?.fontWeight ? { fontWeight: style.fontWeight } : {}),
-          ...(style?.fontFamily ? { fontFamily: style.fontFamily } : {}),
-          ...(style?.fontVariant ? { fontVariant: style.fontVariant } : {}),
-          ...(style?.textAlign ? { textAlign: style.textAlign } : {}),
-          ...(style?.verticalAlign
-            ? { verticalAlign: style.verticalAlign }
-            : {}),
-          ...(style?.textAlignVertical
-            ? { textAlignVertical: style.textAlignVertical }
-            : {}),
-        }}
-      >
-        {children}
-      </Text>
+      {typeof children === "string" ? (
+        <Text
+          style={{
+            ...styles.text,
+            ...(style?.color ? { color: style.color } : {}),
+            ...(style?.fontSize ? { fontSize: style.fontSize } : {}),
+            ...(style?.fontWeight ? { fontWeight: style.fontWeight } : {}),
+            ...(style?.fontFamily ? { fontFamily: style.fontFamily } : {}),
+            ...(style?.fontVariant ? { fontVariant: style.fontVariant } : {}),
+            ...(style?.textAlign ? { textAlign: style.textAlign } : {}),
+            ...(style?.verticalAlign
+              ? { verticalAlign: style.verticalAlign }
+              : {}),
+            ...(style?.textAlignVertical
+              ? { textAlignVertical: style.textAlignVertical }
+              : {}),
+          }}
+        >
+          {children}
+        </Text>
+      ) : (
+        <>{children}</>
+      )}
     </Pressable>
   );
-};
-
-const LinkButton: FC<TButtonProps> = (props) => {
-  props.children = props?.children ?? "Link";
-  return (
-    <Link
-      href={props.hRef ?? ""}
-      asChild
-    >
-      <PressableButton {...props}></PressableButton>
-    </Link>
-  );
-};
-
-const Button: FC<TButtonProps> = (props) => {
-  if (props?.hRef) return <LinkButton {...props}></LinkButton>;
-  return <PressableButton {...props}></PressableButton>;
 };
 
 export default Button;
