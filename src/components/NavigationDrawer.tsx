@@ -10,7 +10,6 @@ export default function NavigationDrawer() {
       <Drawer
         detachInactiveScreens
         screenOptions={() => ({
-          headerTitle: "hi",
           sceneContainerStyle: { backgroundColor: "transparent" },
           header: ({ navigation, route, layout, options }) => (
             <>
@@ -22,7 +21,6 @@ export default function NavigationDrawer() {
               />
             </>
           ),
-          title: "Oi",
         })}
       >
         <Drawer.Screen
