@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { gSC, gStyles } from "@/styles/global";
 import Button from "@/components/Button";
+import { useAppContext } from "@/contexts/AppContext";
 
 const styles = StyleSheet.create({
   view: { ...gStyles.growCenter },
@@ -19,10 +20,9 @@ const HomeScreen: FC<THomeScreenProps> = () => {
       <Text style={{ ...styles.text }}>Home</Text>
       <Button
         onPress={async () => {
-          console.warn("Hello! I'm a Button.")
+          console.warn("Hello! I'm a Button.");
         }}
-      >
-      </Button>
+      ></Button>
     </View>
   );
 };

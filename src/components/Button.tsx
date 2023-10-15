@@ -18,10 +18,13 @@ const styles = StyleSheet.create({
     width: "auto",
     height: "auto",
     minHeight: 40,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    padding: 10,
     borderWidth: 1,
     borderColor: gSC("black", 0.2),
+  },
+  buttonPressed: {
+    transform: [{ scale: 0.95 }],
+    opacity: 0.9,
   },
   text: {
     color: gSC("white"),
@@ -54,10 +57,11 @@ const Button: FC<TButtonProps> = ({
           router.push(hRef);
         }
       }}
-      style={{
+      style={({ pressed }) => ({
         ...styles.button,
         ...(style ? { ...style } : {}),
-      }}
+        ...(pressed ? styles.buttonPressed : {}),
+      })}
     >
       {typeof children === "string" ? (
         <Text

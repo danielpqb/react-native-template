@@ -1,5 +1,5 @@
-import { Slot } from "expo-router";
+import NavigationDrawer from "@/components/NavigationDrawer";
 
 export default function Root() {
-  return <Slot />;
+  return <NavigationDrawer />;
 }

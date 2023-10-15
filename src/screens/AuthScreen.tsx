@@ -1,9 +1,10 @@
+import { useAppContext } from "@/contexts/AppContext";
 import { gSC, gStyles } from "@/styles/global";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 const styles = StyleSheet.create({
-  view: { ...gStyles.growCenter},
+  view: { ...gStyles.growCenter },
   text: {
     color: gSC("orange600"),
     fontSize: 36,
