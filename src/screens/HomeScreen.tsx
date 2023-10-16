@@ -19,6 +19,7 @@ const HomeScreen: FC<THomeScreenProps> = () => {
     <View style={{ ...styles.view, gap: 15 }}>
       <Text style={{ ...styles.text }}>Home</Text>
       <Button
+        onLongPress={() => {}}
         onPress={async () => {
           console.warn("Hello! I'm a Button.");
         }}

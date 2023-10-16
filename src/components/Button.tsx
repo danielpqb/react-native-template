@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
 
 type TButtonProps = {
   onPress?: () => void;
+  onLongPress?: () => void;
   hRef?: string;
   children?: ReactNode;
   style?: ViewStyle & TextStyle;
@@ -46,11 +47,15 @@ type TButtonProps = {
 const Button: FC<TButtonProps> = ({
   hRef,
   onPress = () => {},
+  onLongPress = () => {},
   children = "Button",
   style,
 }) => {
   return (
     <Pressable
+      onLongPress={() => {
+        onLongPress();
+      }}
       onPress={() => {
         onPress();
         if (hRef) {
